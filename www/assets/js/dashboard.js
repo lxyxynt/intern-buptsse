@@ -3,7 +3,7 @@
 
     $('#content').children().remove();
 
-    $.get('/view/dashboard.js', function (code) {
+    $.get('/ui/dashboard.js', function (code) {
         $view = $(eval(code)(data));
         getView($view);
         loadSchedule();
@@ -16,7 +16,7 @@
         $('#dashboard .nav.nav-list .' + data.role + '.phase-all').removeClass('hide');
 
         $("#schedule").remove();
-        $.get('/view/schedule.js', function (code) {
+        $.get('/ui/schedule.js', function (code) {
             $view = $(eval(code)(data));
             $("#task-panel").before($view);
             $('button', $view).click(function () {

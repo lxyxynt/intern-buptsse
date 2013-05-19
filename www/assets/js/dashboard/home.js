@@ -6,7 +6,7 @@
 
     $("#task-panel").children().remove();
 
-    $.get('/view/dashboard/home.js', function (code) {
+    $.get('/ui/dashboard/home.js', function (code) {
         $view = $(eval(code)(data));
         getView($view);
     });

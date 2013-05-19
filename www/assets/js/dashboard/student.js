@@ -6,12 +6,12 @@
 
     var createView = function () {
         $("#task-panel").children().remove();
-        $.get('/view/dashboard/student.js', function (code) {
+        $.get('/ui/dashboard/student.js', function (code) {
             $view = $(eval(code)());
             getView($view);
             $('tr', $view).click(function () {
                 $("#task-panel").children().remove();
-                $.get('/view/dashboard/intern.js', function (code) {
+                $.get('/ui/dashboard/intern.js', function (code) {
                     $view = $(eval(code)(data));
                     getView($view);
                     $('button.btn-large', $view).click(createView);

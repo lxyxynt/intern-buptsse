@@ -17,7 +17,7 @@
     if("professor" == data.role && data.phase == 1) {
         var loadJobList = function () {
             clearView();
-            $.get('/view/dashboard/position-manage.js', function (code) {
+            $.get('/ui/dashboard/position-manage.js', function (code) {
                 $view = $(eval(code)(data));
                 displayView($view);
                 $("button", $view).click(createJob);
@@ -27,7 +27,7 @@
         };
         var createJob = function () {
             clearView();
-            $.get('/view/dashboard/position-editor.js', function (code) {
+            $.get('/ui/dashboard/position-editor.js', function (code) {
                 $view = $(eval(code)({}));
                 displayView($view);
                 $("button.btn-large", $view).click(function () {
@@ -52,7 +52,7 @@
     if(data.phase == 2) {
         var loadJobList = function () { 
             clearView();
-            $.get('/view/dashboard/position-apply.js', function (code) {
+            $.get('/ui/dashboard/position-apply.js', function (code) {
                 $view = $(eval(code)(data));
                 displayView($view);
                 $('tr', $view).click(viewJob.bind(this, loadJobList));
@@ -64,7 +64,7 @@
     if("professor" == data.role && [3, 4].indexOf(data.phase) > -1) {
         var loadJobList = function () {
             clearView();
-            $.get('/view/dashboard/position-enroll.js', function (code) {
+            $.get('/ui/dashboard/position-enroll.js', function (code) {
                 $view = $(eval(code)(data));
                 displayView($view);
                 $('tr', $view).click(viewJob.bind(this, loadJobList));
@@ -75,7 +75,7 @@
 
     var viewJob = function (cb) {
         clearView();
-        $.get('/view/dashboard/position-view.js', function (code) {
+        $.get('/ui/dashboard/position-view.js', function (code) {
             $view = $(eval(code)({
                 phase: data.phase,
                 role: data.role,

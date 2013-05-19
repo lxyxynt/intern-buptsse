@@ -3,7 +3,7 @@
 
     $('#content').children().remove();
 
-    $.get('/view/login.js', function (code) {
+    $.get('/ui/login.js', function (code) {
         $view = $(eval(code)());
         getView($view);
     }); 
