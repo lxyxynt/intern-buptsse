@@ -12,19 +12,4 @@
       tr
         th 学生
         th 实习职位
-    tbody
-      - var student = [{
-      - realname: "王XX",
-      - job: {
-      -   company: {
-      -     name: "XXXX公司"
-      -   },
-      -   title: "攻城师",
-      -   need: 8,
-      -   created_at_str: "2014-02-03"
-      - }}];
-      each i in student
-        tr
-          td #{i.realname}
-          td #{i.job.company.name} - #{i.job.title}
-            i.icon-chevron-right.pull-right
+    tbody#table-student

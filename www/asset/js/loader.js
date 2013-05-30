@@ -58,7 +58,7 @@
     $(document).ready(function () {
         _(data).extend({
             phase: 1,
-            role: 'student',
+            role: 'professor',
             profile: {
                 id: "10212002",
                 realname: "王小二",
@@ -74,6 +74,30 @@
                 created_at_str: "2014-02-03",
                 creator: ""
             }],
+            student: [{
+                realname: "王xx",
+                job: {
+                    company:{
+                        name: "XXXX公司"
+                    },
+                    title: "攻城师",
+                    need: 8,
+                    created_at_str: "2014-02-03"
+                },
+                creator: ""
+            },
+            {
+                realname: "刘xx",
+                job: {
+                    company:{
+                        name: "WWWW公司"
+                    },
+                    title: "攻城师",
+                    need: 8,
+                    created_at_str: "2014-02-03"
+                },
+                creator: ""
+            }]
         });
         data.profile.photo = "http://www.gravatar.com/avatar/" + MD5(data.profile.email);
 
