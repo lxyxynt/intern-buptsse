@@ -1,4 +1,3 @@
-
 (function (data, $) {
 
     $("#dashboard .sidebar ul li").removeClass('active');

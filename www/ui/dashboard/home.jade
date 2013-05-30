@@ -1,6 +1,6 @@
 .white-well
   .legend 实习工作表
-  - if(("professor" == role && [1, 3, 4, 6].indexOf(phase) > -1) || 
+  - if(("professor" == role && [1, 3, 4, 6].indexOf(phase) > -1) ||
   -    ("student" == role   && [2, 5].indexOf(phase) > -1)) {
     .alert.alert-success
       strong #{phases[phase - 1]}
@@ -10,6 +10,7 @@
       strong #{phases[phase - 1]}
       |  不是您的用户操作阶段，但您能够查看相关的系统信息
   - }
+
   table.table.table-bordered.table-striped.table-hover
     colgroup
       col.span2
@@ -40,7 +41,7 @@
       tr
         td 正式实习
         td 2014-04-01~2014-09-18
-        td 
+        td
           | 第一周，学生上传“企业实习确认表格”
           br
           | 接下来每周，学生上传“企业实习周报”
