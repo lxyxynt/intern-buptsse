@@ -2,7 +2,12 @@
   "name": "intern-buptsse",
   "version": "0.0.1",
   "description": "Internship management system designed for buptsse",
-  "keywords": ["application", "web", "intern", "buptsse"],
+  "keywords": [
+    "application",
+    "web",
+    "intern",
+    "buptsse"
+  ],
   "repository": "git://github.com/shinohane/intern-buptsse.git",
   "author": "Shinohane <imandry.c@gmail.com> (http://shinohane.com)",
   "dependencies": {
@@ -20,11 +25,14 @@
   "devDependencies": {
     "node-dev": "*",
     "mocha": "*",
-    "chai": "*"
+    "chai": "*",
+    "supertest": "*"
   },
   "scripts": {
-      "start": "node ./index.js",
-      "test": "mocha -t 30000 -R spec"
+    "start": "node ./index.js",
+    "test": "node ./node_modules/.bin/mocha -t 30000 -R spec"
   },
-  "engines": { "node": ">= 0.8.0" }
+  "engines": {
+    "node": ">= 0.8.0"
+  }
 }
