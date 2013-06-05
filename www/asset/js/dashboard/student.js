@@ -20,6 +20,7 @@
                 $view.appendTo("#table-student");
                 $view.click(function () {
                     getDetail(student);
+                    return false;
                 });
             });
         });
